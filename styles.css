@@ -9,8 +9,8 @@
 }
 
 /* Base */
-* { 
-  box-sizing: border-box; 
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -22,9 +22,9 @@ body {
   background: var(--fondo);
 }
 
-a { 
-  color: inherit; 
-  text-decoration: none; 
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 h1, h2, h3 {
@@ -32,49 +32,46 @@ h1, h2, h3 {
   font-weight: 500;
   line-height: 1.15;
   color: var(--lila-oscuro);
-  margin: 0 0 .80px;
-}
-h1 { 
-  font-size: 56px; 
-}
-h2 { 
-  font-size: 41.6px; 
-}
-h3 { 
-  font-size: 24px; 
+  margin: 0 0 16px;
 }
 
-.lead { 
+h1 { font-size: 56px; }
+h2 { font-size: 41.6px; }
+h3 { font-size: 24px; }
+
+.lead {
   font-family: "Cormorant Garamond", serif;
-  font-size: 22.4px; 
-  line-height: 1.4; 
+  font-size: 22.4px;
+  line-height: 1.4;
 }
-.firma { 
+
+.firma {
   font-family: "Pinyon Script", cursive;
-  font-size: 32px; 
+  font-size: 32px;
   color: var(--lila);
-  margin: 0; 
+  margin: 0;
 }
 
 /* Estructura */
-.contenedor { 
-  width: min(92%, 1100px); 
-  margin: 0 auto; }
-.seccion { 
-  padding: 80px 0; 
+.contenedor {
+  width: min(92%, 1100px);
+  margin: 0 auto;
 }
-.lavanda { 
-  background: var(--lavanda); 
+
+.seccion {
+  padding: 80px 0;
 }
-.beige { 
-  background: var(--beige);
+
+.lavanda { background: var(--lavanda); }
+.beige { background: var(--beige); }
+
+.oscuro {
+  background: var(--lila-oscuro);
+  color: #fff;
 }
-.oscuro { 
-  background: var(--lila-oscuro); 
-  color: #fff; 
-}
-.oscuro h2 { 
-  color: #fff; 
+
+.oscuro h2, .oscuro h3 {
+  color: #fff;
 }
 
 /* Columnas */
@@ -84,117 +81,216 @@ h3 {
   gap: 60px;
   align-items: center;
 }
-.columnas.tres { 
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px; 
-  margin-top: 40px; 
+
+.columnas.tres {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  align-items: stretch;
 }
 
 /* Cabecera */
-.cabecera { 
-  position: sticky; 
-  top: 0; 
-  z-index: 10; 
-  background: var(--fondo); 
-  border-bottom: 1px solid var(--lavanda); 
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--fondo);
+  border-bottom: 1px solid var(--lavanda);
 }
-.contenedor.fila { 
-  display: flex; 
+
+.contenedor.fila {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0; 
+  padding: 12px 0;
 }
-.marca { 
+
+.marca {
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 27.2px; 
+  font-size: 27.2px;
   font-weight: 600;
-  color: var(--lila); 
+  color: var(--lila);
 }
-.marca img { 
-  width: 70px; 
-  height: 70px; 
+
+.marca img {
+  width: 70px;
+  height: 70px;
 }
-nav { 
-  display: flex; 
-  align-items: center; 
-  gap: 24px; 
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav a:hover {
+  color: var(--lila);
 }
 
 /* Botones */
-.boton { 
-  display: inline-block; 
-  background: var(--lila); 
-  color: #fff; 
-  font-weight: 700; 
-  padding: 12px 26px; 
-  border-radius: 999px; 
+.boton {
+  display: inline-block;
+  background: var(--lila);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
 }
-.boton:hover { 
-  background: var(--lila-oscuro); 
+
+.boton:hover {
+  background: var(--lila-oscuro);
 }
-.boton.claro { 
-  background: #E6D6BC; 
-  color: var(--texto); 
+
+.boton.claro {
+  background: #E6D6BC;
+  color: var(--texto);
 }
 
 /* Arco con forma de pétalo */
-.arco { 
-  aspect-ratio: 4 / 5; 
-  overflow: hidden; 
-  border-radius: 999px 999px 14px 14px; 
-  background: var(--lavanda);   
+.arco {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 999px 999px 14px 14px;
+  background: var(--lavanda);
 }
-.arco img { 
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  object-position: top; 
+
+.arco img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Tarjetas (Cards pedidas en el PDF) */
+.tarjeta {
+  background: #fff;
+  border: 1px solid var(--lavanda);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: left;
+}
+
+.tarjeta .arco {
+  margin-bottom: 16px;
 }
 
 /* Pasos y listas */
-.pasos { 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
+.pasos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   border-left: 2px solid var(--lila);
 }
-.pasos li { 
-  padding: 0 0 24px 28px; 
-}
-.pasos li:last-child { 
-  padding-bottom: 0; 
-}
-.pasos h3 { 
-  margin-bottom: 
-  4px; }
-.pasos p { 
-  margin: 0; 
+
+.pasos li {
+  padding: 0 0 24px 28px;
 }
 
-.lista { 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; }
-.lista li { 
-  padding: 12px 0; 
-  border-bottom: 1px solid var(--lavanda); 
-  font-size: 17.6px; 
+.pasos li:last-child {
+  padding-bottom: 0;
 }
-.listaA{
-  font-size: 17.6px;  
+
+.pasos h3 {
+  margin-bottom: 4px;
+}
+
+.pasos p {
+  margin: 0;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--lavanda);
+  font-size: 17.6px;
+}
+
+.listaA {
+  font-size: 17.6px;
+}
+
+/* Formulario (Pedido en el PDF) */
+.formulario {
+  background: #fff;
+  color: var(--texto);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.formulario h3 {
+  color: var(--lila-oscuro);
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--lila);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  background: var(--fondo);
 }
 
 /* Pie */
-.pie { 
-  background: var(--texto); 
-  color: #ccc; 
-  text-align: center; 
-  padding: 30px 5%; 
-  font-size: 14.4px; 
+.pie {
+  background: var(--texto);
+  color: #ccc;
+  text-align: center;
+  padding: 30px 5%;
+  font-size: 14.4px;
 }
-.pie p { 
-  margin: 4px 0; 
+
+.pie p {
+  margin: 4px 0;
+}
+
+/* Diseño Responsive para Celular (Mobile) */
+@media (max-width: 768px) {
+  h1 { font-size: 38px; }
+  h2 { font-size: 30px; }
+
+  .seccion {
+    padding: 50px 0;
+  }
+
+  .contenedor.fila {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .columnas,
+  .columnas.tres {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }

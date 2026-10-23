@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Rafa Medicina Regenerativa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor fila">
+      <a class="marca" href="index.html"><img src="img/logo.png" alt="Rafa"> Rafa</a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="doctora.html">La doctora</a>
+        <a href="consultorio.html">Consultorio</a>
+        <a class="boton" href="contacto.html">Reservar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion oscuro" id="contacto">
+      <div class="contenedor columnas">
+        <!-- Datos de contacto -->
+        <div>
+          <h2>Reserva tu evaluación</h2>
+          <p class="lead">Escríbenos por WhatsApp o completa el formulario y te confirmamos fecha y hora.</p>
+          <p><strong>Teléfono:</strong> +51 973 669 638</p>
+          <p><strong>Correo:</strong> Rafa120@gmail.com</p>
+          <p><strong>Dirección:</strong> Urb. Larapa Grande I-4-10, San Jerónimo, Cusco, Perú</p>
+          <p><strong>Horario:</strong> Lunes a sábado, 8:15 a 14:00</p>
+          <br>
+          <a class="boton claro" href="https://wa.me/51973669638">Escribir por WhatsApp</a>
+        </div>
+
+        <!-- Formulario solicitado en el PDF -->
+        <form class="formulario" action="#" method="post">
+          <h3>Formulario de Cita</h3>
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Tu nombre y apellidos" required>
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono / Celular</label>
+            <input type="tel" id="telefono" placeholder="Ej. 973 669 638" required>
+          </div>
+          <div class="campo">
+            <label for="especialidad">Motivo de consulta</label>
+            <select id="especialidad">
+              <option value="ozono">Ozonoterapia</option>
+              <option value="dolor">Tratamiento del dolor y articulaciones</option>
+              <option value="piel">Cuidado de la piel y rejuvenecimiento</option>
+              <option value="evaluacion">Evaluación médica general</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje o consulta breve</label>
+            <textarea id="mensaje" rows="3" placeholder="Cuéntanos brevemente tus síntomas..."></textarea>
+          </div>
+          <button type="submit" class="boton">Enviar solicitud</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Dra. Yenifer Alvarado Amau · Médico cirujano · CMP 00000</p>
+    <p>La información de este sitio es orientativa y no reemplaza una consulta médica.</p><br>
+    <p>Josue Braham Torres Cueva (100%)</p>
+    <p>Cristian Josue Muñoz Farfan (100%)</p>
+    <p>Zoran Joshua Verastegui Alvarado (100%)</p>
+    <p>Guillermo Augusto Huaraca Paico (100%)</p>
+  </footer>
+
+</body>
+</html>
