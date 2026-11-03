@@ -294,3 +294,36 @@ nav a:hover {
     gap: 30px;
   }
 }
+
+
+/*------------- Animacion de las imagenes consultrio -------------------*/
+@keyframes aparecerArco {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Aplicamos la animación a cada arco con retraso escalonado */
+.tarjeta:nth-child(1) .arco {
+  animation: aparecerArco 1s ease-out 0.2s both;
+}
+
+
+.tarjeta:nth-child(2) .arco {
+  animation: aparecerArco 1s ease-out 0.5s both;
+}
+
+
+.tarjeta:nth-child(3) .arco {
+  animation: aparecerArco 1s ease-out 0.8s both;
+}
